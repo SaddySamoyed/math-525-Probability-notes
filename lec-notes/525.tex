@@ -1,0 +1,61 @@
+\documentclass[lang=cn,11pt]{elegantbook}
+\usepackage[utf8]{inputenc}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+
+\title{Math 526: discrete state stochastic process}
+
+\begin{document}
+\frontmatter
+\tableofcontents
+\mainmatter
+
+\chapter{Introduction}
+
+
+
+\begin{example}{two-stage Markov chain}
+We can always extend state space to make a process Markov.
+Suppose a basketball player makes a hit:
+$1/2$ if he missed last two;
+$2/3$ if he missed one of last two;
+$3/4$ if hit both.\\
+To model it into a Markov chain, set $S = \{  
+HH,HM,MH,MM \}$
+
+\end{example}
+
+
+
+
+
+\begin{theorem}
+    The $m^\text{th}$ stop transition probability $P(X_{m+n=y}\mid X_n = x)$ is $p^m(x,y)$.
+\end{theorem}
+\begin{proof}
+    By induction, it holds for $m-1$.\\
+    $$
+    P(X_{m+n=y}\mid X_n = x) = \sum_{i \in S} \mathbb{P}(X_{n+m=i} \mid X_{n+m-1=k}, X_n = x) \mathbb{P}(X_{n+m=k}\mid X_n = x) 
+    $$
+    $$
+    = \sum_{i \in S} \bP(X) 
+    $$
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
